@@ -74,10 +74,10 @@
 
 - (void)setCurrentThrowScore
 {
-    NSInteger score = 0;
-    NSArray *numberMatrix = [[NSArray alloc] initWithObjects:@1, @2, @3, @4, @5, @6, nil];
+    NSInteger diceCounter[6] = {0,0,0,0,0,0};
+
     for (DieLabel *label in self.dice) {
-        //numberMatrix[label.text-1] += label.text;
+        diceCounter[label.text.intValue-1]++;
     }
 }
 
