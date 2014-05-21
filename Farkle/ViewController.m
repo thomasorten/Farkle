@@ -38,7 +38,8 @@
     for (DieLabel *lockedLabel in self.dice) {
         lockedLabel.isLocked = YES;
     }
-    [self setCurrentThrowScore];
+    self.currentPlayerScore = [self setCurrentThrowScore];
+    self.userScore.text = [NSString stringWithFormat:@"%d", self.currentPlayerScore];
     for (UIView *subview in self.view.subviews) {
         DieLabel *label = (DieLabel *) subview;
         if ([subview isKindOfClass:[DieLabel class]] && ![self.dice containsObject:subview] && !label.isLocked) {
@@ -72,13 +73,31 @@
     }
 }
 
-- (void)setCurrentThrowScore
+- (NSInteger)setCurrentThrowScore
 {
+    NSInteger score = 0;
     NSInteger diceCounter[6] = {0,0,0,0,0,0};
+    NSInteger scoreHolder[6] = {1000,200,300,400,500,600};
 
     for (DieLabel *label in self.dice) {
         diceCounter[label.text.intValue-1]++;
     }
+
+    for (int x = 0; x < 6; x++) {
+        if (diceCounter[x-1] == 3) {
+            score += scoreHolder[x-1];
+        } else {
+            if (x == 1) {
+                score += 100 * diceCounter[x-1];
+            }
+            if (x == 5) {
+                score += 50 * diceCounter[x-1];
+            }
+        }
+    }
+
+    return score;
+
 }
 
 @end
