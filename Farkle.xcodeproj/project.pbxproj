@@ -21,7 +21,8 @@
 		6A628E0D192D299E00341BBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A628DEF192D299E00341BBB /* UIKit.framework */; };
 		6A628E15192D299E00341BBB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A628E13192D299E00341BBB /* InfoPlist.strings */; };
 		6A628E17192D299E00341BBB /* FarkleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A628E16192D299E00341BBB /* FarkleTests.m */; };
-		6A628E21192D29C600341BBB /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A628E20192D29C600341BBB /* CheckMate.framework */; };
+		6A628E24192D2ABD00341BBB /* DieLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A628E23192D2ABD00341BBB /* DieLabel.m */; };
+		6A628E26192D57E200341BBB /* CheckMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A628E25192D57E200341BBB /* CheckMate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,9 @@
 		6A628E12192D299E00341BBB /* FarkleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FarkleTests-Info.plist"; sourceTree = "<group>"; };
 		6A628E14192D299E00341BBB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A628E16192D299E00341BBB /* FarkleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FarkleTests.m; sourceTree = "<group>"; };
-		6A628E20192D29C600341BBB /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
+		6A628E22192D2ABD00341BBB /* DieLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DieLabel.h; sourceTree = "<group>"; };
+		6A628E23192D2ABD00341BBB /* DieLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DieLabel.m; sourceTree = "<group>"; };
+		6A628E25192D57E200341BBB /* CheckMate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CheckMate.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A628E21192D29C600341BBB /* CheckMate.framework in Frameworks */,
+				6A628E26192D57E200341BBB /* CheckMate.framework in Frameworks */,
 				6A628DEE192D299E00341BBB /* CoreGraphics.framework in Frameworks */,
 				6A628DF0192D299E00341BBB /* UIKit.framework in Frameworks */,
 				6A628DEC192D299E00341BBB /* Foundation.framework in Frameworks */,
@@ -104,7 +107,7 @@
 		6A628DEA192D299E00341BBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A628E20192D29C600341BBB /* CheckMate.framework */,
+				6A628E25192D57E200341BBB /* CheckMate.framework */,
 				6A628DEB192D299E00341BBB /* Foundation.framework */,
 				6A628DED192D299E00341BBB /* CoreGraphics.framework */,
 				6A628DEF192D299E00341BBB /* UIKit.framework */,
@@ -123,6 +126,8 @@
 				6A628E01192D299E00341BBB /* ViewController.m */,
 				6A628E03192D299E00341BBB /* Images.xcassets */,
 				6A628DF2192D299E00341BBB /* Supporting Files */,
+				6A628E22192D2ABD00341BBB /* DieLabel.h */,
+				6A628E23192D2ABD00341BBB /* DieLabel.m */,
 			);
 			path = Farkle;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				6A628E02192D299E00341BBB /* ViewController.m in Sources */,
 				6A628DFC192D299E00341BBB /* AppDelegate.m in Sources */,
 				6A628DF8192D299E00341BBB /* main.m in Sources */,
+				6A628E24192D2ABD00341BBB /* DieLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
